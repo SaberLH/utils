@@ -16,7 +16,11 @@
     <description>用户认证和授权服务器</description>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <passay.version>1.6.0</passay.version>
+        <problem.version>0.26.1</problem.version>
         <bootstrap.version>4.5.0</bootstrap.version>
     </properties>
 
@@ -43,6 +47,25 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- 异常的统一处理 -->
+        <dependency>
+            <groupId>org.zalando</groupId>
+            <artifactId>problem-spring-web</artifactId>
+            <version>${problem.version}</version>
+        </dependency>
+
+        <!-- Passay库实现强大安全的密码策略 -->
+        <dependency>
+            <groupId>org.passay</groupId>
+            <artifactId>passay</artifactId>
+            <version>${passay.version}</version>
         </dependency>
 
         <!-- 用于开发 -->

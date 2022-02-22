@@ -1,5 +1,12 @@
 server:
   port: 8080
+  error:
+    whitelabel:
+      enabled: true
+  # 发现出现中文乱码，则配置下面servlet.encoding.force: true
+  servlet:
+    encoding:
+      force: true
 
 logging:
   pattern:
@@ -9,3 +16,19 @@ logging:
     org:
       springframework:
         security: DEBUG
+    com:
+      spring:
+        serurity:
+          learn: DEBUG
+
+spring:
+  messages:
+    always-use-message-format: false
+    basename: messages
+    encoding: UTF-8
+    fallback-to-system-locale: true
+    use-code-as-default-message: false
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
