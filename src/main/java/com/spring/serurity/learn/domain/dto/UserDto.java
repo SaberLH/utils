@@ -4,7 +4,10 @@ package com.spring.serurity.learn.domain.dto;
 import com.spring.serurity.learn.validation.annotation.PasswordMatches;
 import com.spring.serurity.learn.validation.annotation.ValidEmail;
 import com.spring.serurity.learn.validation.annotation.ValidPassword;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -16,6 +19,9 @@ import java.io.Serializable;
  */
 @PasswordMatches
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserDto implements Serializable {
 
     private static final long serialVersionUID = -3057291386996958394L;

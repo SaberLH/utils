@@ -15,15 +15,13 @@ import java.util.Arrays;
 @RequiredArgsConstructor
 public class PasswordConstraintValidator implements ConstraintValidator<ValidPassword, String> {
 
-    private final SpringMessageResolver messageResolver;
-
     @Override
     public void initialize(final ValidPassword constraintAnnotation) {}
 
     @Override
     public boolean isValid(final String password, final ConstraintValidatorContext context) {
 
-        PasswordValidator validator = new PasswordValidator(messageResolver, Arrays.asList(
+        PasswordValidator validator = new PasswordValidator(Arrays.asList(
                 // 长度规则：8 - 30 位
                 new LengthRule(8, 30),
                 // 至少有一个大写字母
