@@ -20,6 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <passay.version>1.6.0</passay.version>
+        <jjwt.version>0.11.1</jjwt.version>
         <problem.version>0.26.1</problem.version>
         <bootstrap.version>4.5.0</bootstrap.version>
     </properties>
@@ -67,6 +68,26 @@
             <artifactId>passay</artifactId>
             <version>${passay.version}</version>
         </dependency>
+
+        <!-- JWT 依赖开始 -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jjwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>${jjwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>${jjwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- JWT 依赖结束 -->
 
         <!-- 用于开发 -->
         <dependency>
