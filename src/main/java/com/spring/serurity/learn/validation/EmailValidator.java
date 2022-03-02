@@ -5,6 +5,7 @@ import lombok.val;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -24,8 +25,8 @@ public class EmailValidator implements ConstraintValidator<ValidEmail, String> {
     }
 
     private boolean validateEmail(final String email) {
-        val pattern = Pattern.compile(EMAIL_PATTERN);
-        val matcher = pattern.matcher(email);
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
 }
