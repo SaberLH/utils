@@ -9,26 +9,15 @@ server:
       force: true
 
 logging:
-  pattern:
-    console: '%clr(%d{E HH:mm:ss.SSS}){blue} %clr(%-5p) %clr(${PID}){faint} %clr(---){faint}
-                %clr([%8.15t]){cyan} %clr(%-40.40logger{0}){blue} %clr(:){red} %clr(%m){faint}%n'
   level:
     org:
       springframework:
         security: DEBUG
     com:
       spring:
-        serurity:
+        security:
           learn: DEBUG
 
 spring:
-  messages:
-    always-use-message-format: false
-    basename: messages
-    encoding: UTF-8
-    fallback-to-system-locale: true
-    use-code-as-default-message: false
-  mvc:
-    throw-exception-if-no-handler-found: true
-  resources:
-    add-mappings: false
+  profiles:
+    active: "dev"

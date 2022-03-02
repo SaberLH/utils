@@ -1,0 +1,41 @@
+{
+  "groups": [
+    {
+      "name": "learn",
+      "type": "com.spring.security.learn.config.AppProperties",
+      "sourceType": "com.spring.security.learn.config.AppProperties"
+    },
+    {
+      "name": "learn.jwt",
+      "type": "com.spring.security.learn.config.AppProperties$Jwt",
+      "sourceType": "com.spring.security.learn.config.AppProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "learn.jwt.access-token-expire-time",
+      "type": "java.lang.Long",
+      "sourceType": "com.spring.security.learn.config.AppProperties$Jwt",
+      "defaultValue": 0
+    },
+    {
+      "name": "learn.jwt.header",
+      "type": "java.lang.String",
+      "sourceType": "com.spring.security.learn.config.AppProperties$Jwt",
+      "defaultValue": "Authorization"
+    },
+    {
+      "name": "learn.jwt.prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.spring.security.learn.config.AppProperties$Jwt",
+      "defaultValue": "Bearer "
+    },
+    {
+      "name": "learn.jwt.refresh-token-expire-time",
+      "type": "java.lang.Long",
+      "sourceType": "com.spring.security.learn.config.AppProperties$Jwt",
+      "defaultValue": 0
+    }
+  ],
+  "hints": []
+}
